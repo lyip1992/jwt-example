@@ -1,6 +1,9 @@
 {
   "name": "node-token-jwt",
   "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
   "dependencies": {
     "body-parser": "^1.13.2",
     "express": "^4.13.1",
