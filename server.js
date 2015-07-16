@@ -9,4 +9,4 @@ var User = require('app/models/user'); // get user mongoose model
 
 var port = process.env.PORT || 8080; // create, sign, and verify tokens
 mongoose.connect(config.database); // connect to the database
-app.use('secret', config.secret); // secret variable
+app.use('superSecret', config.secret); // secret variable
