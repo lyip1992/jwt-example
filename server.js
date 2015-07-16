@@ -23,3 +23,6 @@ app.use(morgan('dev'));
 app.get('/', function(req, res){
   res.send('Hello! This is the API at http://localhost:' + port + '/api');
 });
+
+app.listen(port);
+console.log('Express server listening on port: ' + port);
