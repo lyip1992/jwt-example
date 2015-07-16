@@ -1,5 +1,5 @@
 var app = require('express')();
-var body-parser = require('body-parser');
+var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var mongoose = require('mongoose');
 
@@ -10,3 +10,7 @@ var User = require('app/models/user'); // get user mongoose model
 var port = process.env.PORT || 8080; // create, sign, and verify tokens
 mongoose.connect(config.database); // connect to the database
 app.use('superSecret', config.secret); // secret variable
+
+// use body parser so we can get info from POST and/or URL parameters
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
