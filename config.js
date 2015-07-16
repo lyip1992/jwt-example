@@ -1,4 +1,4 @@
 module.exports = {
-  'secret': 'superdupersecret'
+  'secret': 'superdupersecret',
   'database': 'mongodb://localhost/jwt-example'
-}
+};
