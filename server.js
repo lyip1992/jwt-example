@@ -17,3 +17,9 @@ app.use(bodyParser.json());
 
 // use morgan to log requests to the console
 app.use(morgan('dev'));
+
+// routes
+
+app.get('/', function(req, res){
+  res.send('Hello! This is the API at http://localhost:' + port + '/api');
+});
