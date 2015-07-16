@@ -24,5 +24,22 @@ app.get('/', function(req, res){
   res.send('Hello! This is the API at http://localhost:' + port + '/api');
 });
 
+app.get('/setup', function(req, res){
+  // create a sample user
+  var leon = new User({
+    name: 'Leon',
+    password: 'password',
+    admin: true
+  });
+
+  // save sample user
+  leon.save(function(err){
+    if( err ) throw err;
+
+    console.log('User saved successfully.');
+    res.json({ success: true });
+  });
+});
+
 app.listen(port);
 console.log('Express server listening on port: ' + port);
